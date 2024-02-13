@@ -1,0 +1,77 @@
+﻿@model PhoneBookMVC.Models.DominModels.TblUser
+
+@{
+    ViewBag.Title = "حذف مخاطب";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>حذف مخاطب</h2>
+
+<h3 class="margin-helper">آیا مایل به حذف مخاطب هستید؟</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Family)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Family)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NationalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NationalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrgPos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrgPos)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        
+            <div class="form-actions no-color">
+                <input type="submit" value="حذف" class="btn btn-danger h5" /> |
+                <div class="btn btn-info h5">
+                    @Html.ActionLink("بازگشت", "Index")
+                </div>
+            </div>
+            }
+        </div>
